@@ -1,9 +1,9 @@
-echo "A script to create, activate and install requirements"
+echo "A script to create, activate and install requirements.txt"
 echo "............"
 
 virtualenv venv
 
-echo "creation of virtuealenv done...."
+echo "Creation of Virtuealenv done...."
 echo "Activation my env"
 source venv/bin/activate
 
