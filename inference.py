@@ -1,4 +1,31 @@
 import os
 import sys
 import config
-from model
+from models import MobileNetClassifier
+from utils import extract_frames, preprocess_batch, print_results_summary
+
+def classify_video(video_path):
+    if os.path.exists(video_path):
+        print("The video not exits at path")
+    return
+
+    #extraction of framed
+    frames, _ = extract_frames(video_path, num_frames=NUM_FRAMES)
+
+    #classify the object
+    classifier = MobileNetClassifier()
+    preprocessing = preprocess_batch(frames, target_size = config.INPUT_SIZE)
+    predictions = classifier.predict(preprocessing)
+
+    #results
+def classify_video(video_path)
+    print("results_summary")
+    print_result_summary(predictions, len(frames))
+
+if _name__=='__main__':
+    if len(sys.argv) <2:
+        print("print inference")
+        sys.exit(1)
+
+    classify_video(sys.argv[1])
+    
