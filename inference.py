@@ -18,7 +18,7 @@ def classify_video(video_path):
     predictions = classifier.predict(preprocessing)
 
     #results
-def classify_video(video_path)
+def classify_video(video_path):
     print("results_summary")
     print_result_summary(predictions, len(frames))
 
@@ -28,4 +28,3 @@ if _name__=='__main__':
         sys.exit(1)
 
     classify_video(sys.argv[1])
-    
