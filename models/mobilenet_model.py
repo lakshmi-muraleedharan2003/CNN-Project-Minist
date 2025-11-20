@@ -2,7 +2,7 @@ from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.applications.MobileNetV2 import decode_prediction
 import numpy as np
 
-class MobileNetClassfier:
+class MobileNetClassifier:
     def __init__(self):
         print("Loding of the model.....")
         self.model = MobileNetV2(weight = 'imagenet')
