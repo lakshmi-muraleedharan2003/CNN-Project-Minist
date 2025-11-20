@@ -13,7 +13,7 @@ def classfify_video(video_path):
     frames, _ = extract_frames(video_path, num_frames=NUM_FRAMES)
 
     #classfiy the object
-    classfier = MobileNetClassfier()
+    classfier = MobileNetClassifier()
     preprocessing = preprocess_batch(frames, target_size = config.INPUT_SIZE)
     predictions = classfier.predict(preprocessing)
 
