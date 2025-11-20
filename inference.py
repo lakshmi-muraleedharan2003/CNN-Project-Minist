@@ -4,7 +4,7 @@ import config
 from models import MobileNetClassifier
 from utils import extract_frames, preprocess_batch, print_results_summary
 
-def classfify_video(video_path):
+def classify_video(video_path):
     if os.path.exists(video_path):
         print("The video not exits at path  ")
         return
@@ -13,9 +13,9 @@ def classfify_video(video_path):
     frames, _ = extract_frames(video_path, num_frames=NUM_FRAMES)
 
     #classfiy the object
-    classfier = MobileNetClassifier()
+    classifier = MobileNetClassifier()
     preprocessing = preprocess_batch(frames, target_size = config.INPUT_SIZE)
-    predictions = classfier.predict(preprocessing)
+    predictions = classifier.predict(preprocessing)
 
     #results
     print("results summmary")
